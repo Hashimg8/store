@@ -140,7 +140,7 @@ header{
     background: #030213a6;
 }
 .text-hero{
-    padding-top: 80px;
+    padding-top: 5rem;
 }
 .hero span{
     padding: .3125rem .5rem;
@@ -181,8 +181,12 @@ h1{
     border: none;
     font-size: 1.23rem;
     font-family: "Cairo", sans-serif;
+    transition: transform .4s;
 }
-.hero-btn button:nth-child(2){
+.hero-btn button:hover{
+    transform: translateY(-2px);
+}
+.hero-btn  button:nth-child(2){
     background-color: var(--color-gray-600);
     border: 2px solid #fff;
     color: var(--color-white);
@@ -231,7 +235,7 @@ h2{
     font-size: 1.3rem;
     font-family: "Almarai" sans-serif;
     text-align: center;
-    color: #cecbcb;
+    color: #857373;
 }
 .box-prod {
     margin-top: 2.5rem;
@@ -273,10 +277,14 @@ h3{
     font-size: 1.8rem;
     font-family: "Cairo", sans-serif;
     color:var(--color-white);
+    margin-bottom: 5px;
 }
-.cards p{
+.back p{
+    background-color: #d4183e59;
     font-size: 1.3rem;
-    color: #e8e8e89e;
+    padding: .5rem;
+    border-radius: 8px;
+    color: #e8e8e8ef;
 }
 /*  */
 .box-about{
@@ -300,28 +308,28 @@ h3{
     top: 0;
 }
 .text-about{
+    width: 100%;
+    text-align: center;
+    padding: .625rem;
     position: absolute;
-    bottom: 45%;
-    right: 30%;
+    bottom: 40%;
     color: #fff;
 }
 .text-about h4{
     font-size: 2.5rem;
     font-family: "cairo", sans-serif;
-    text-align: center;
     margin-top: .625rem;
 }
 .text-about p{
     font-size: 1.2rem;
     font-family: "Almarai" ,sans-serif;
-}
-.about-info{
-    padding-top: 5rem;
+    line-height: 1.7;
 }
 .about-info{
     display: grid;
-    grid-template-columns: repeat(2,minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
     gap: 1.23rem;
+    padding-top: 5rem;
 }
 .text-info h4{
    font-size: 2.5rem;
@@ -362,6 +370,102 @@ h3{
     height: 100%;
     object-fit: cover;
 }
+/* =====================subscription========================================== */
+.subscription{
+    background: #000;
+    color: #fff;
+    padding: 4rem;
+    margin: 4rem 0 1.25rem;
+    text-align: center;
+}
+.subsc h4{
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-family: "cairo", sans-serif;
+}
+.subsc p{
+    font-size: 1.2rem;
+    font-family:"Almarai",sans-serif ;
+    margin: .625rem 0 1.25rem;
+    line-height: 1.9;
+}
+.subsc input{
+    padding: 10px 15px;
+    width: 30%;
+    border:none;
+    outline: none;
+    border-radius: 15px;
+    font-size: .9989rem;
+    font-family: "Almarai", sans-serif;
+}
+.subsc button{
+    width: 10%;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "cairo", sans-serif;
+    background: var(--destructive);
+    border: none;
+    color: var(--color-white);
+    margin-right: 5px;
+    transition: .4s;
+}
+.subsc button:hover{
+    transform: translateY(5px);
+}
+/* ====================footer========================================== */
+footer{
+    background: #000;
+    color: #fff;
+}
+.box-footer{
+    padding: .9375rem;
+}
+.text-footer{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 2rem;
+}
+h5{
+    font-size: 1.3rem;
+    font-family: "cairo";
+    margin-bottom: 1.2rem;
+}
+.text-footer p{
+    font-family: "Almarai",sans-serif;
+    line-height: 1.6;
+    color: oklch(100% 0.00011 271.152 / 0.616);
+}
+.text-footer ul li {
+    list-style: none;
+    margin-bottom: .625rem;
+}
+.text-footer a{
+    text-decoration: none;
+    color: oklch(100% 0.00011 271.152 / 0.616);
+    font-size: 1.1875rem;
+    font-family:"Almarai", sans-serif ;
+    transition:  color .4s;
+}
+.text-footer a:hover{
+    color: oklch(100% 0.00011 271.152);
+}
+.foot-icon ul li{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: oklch(100% 0.00011 271.152 / 0.616);
+}
+.end{
+    border-top:2px solid #857373 ;
+    margin-top: .625rem;
+    text-align: center;
+}
+.end p{
+    padding: .625rem ;
+    font-size: 1.2rem;
+    font-family: "cairo",sans-serif;
+}
 /* ====================mobaile================================ */
 @media (max-width:600px){
     .title span:nth-child(2){
@@ -369,12 +473,15 @@ h3{
     }
     .container{
         width: 100%;
-        padding: 0 15px;
+        padding: 1.25rem;
     }
     .nav{
         padding: 0;
         position: relative;
         top: 0;
+    }
+    .nav-bar{
+        padding: 0 .5rem;
     }
     .link {
         display: flex;
@@ -386,6 +493,8 @@ h3{
         top: 100%;
         right: -100%;
         width: 100%;
+        background: #eeeeee9e;
+        backdrop-filter: blur(5px);
         padding: .625rem;
     }
     
@@ -424,6 +533,7 @@ h3{
         left: 75px;
         top: 0;
     }
+    /* ============hero======================= */
     .hero{
         height: 55vh;
         padding-top: 0;
@@ -432,17 +542,36 @@ h3{
         height: 55vh;
     }
     .text-hero{
-        padding-top: 80px;
+        padding-top: 5.9375rem;
     }
     .hero .des{
         width: 100%;
     }
+    .hero-btn{
+        gap: 20px;
+    }
     .return{
         padding: 20px 0;
         grid-template-columns: repeat(2,minmax(0,1fr));
+        padding: .9375rem .625rem;
     }
     /*  */
     .box-prod{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    /* ===============================subscription================================== */
+    .subscription{
+        padding: 1.25rem;
+    }
+    .subsc input{
+        width: 65%;
+    }
+    .subsc button{
+        width: 20%;
+        padding: .625rem;
+    }
+    /* ====================footer=============================== */
+    .text-footer{
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
