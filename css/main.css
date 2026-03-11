@@ -4,7 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-:root{
+/* :root{
     --primary: #030213;
     --destructive: #d4183d;
     --secondary: oklch(95% .0058 264.53);
@@ -15,29 +15,72 @@
     --card: #fff;
     --color-gray-600: oklch(44.6% .03 256.802);
     --back: oklch(87.2% .01 258.338);
-}
+} */
+ :root {
+     --color-bg: #ffffff;
+
+     --black-heading: #111111;
+     /* للعناوين */
+     --color-text: #444444;
+     /* للفقرات */
+     --color-muted: #777777;
+     /* نص ثانوي */
+
+     --color-primary: #1a1a1a;
+     /* هوية الموقع */
+     --color-accent: #c1121f;
+     /* زر / تمييز */
+
+     --color-link: #1a1a1a;
+     --color-link-hover: #c1121f;
+    --color-accent2: #bfa046;
+        /* ذهبي رجالي فاخر */
+    /* الخلفيات */
+        --color-bg: #0f0f12;
+        /* خلفية رئيسية */
+        --color-surface: #18181c;
+        /* بطاقات / أقسام */
+        --color-elevated: #222228;
+        /* عناصر مرتفعة */
+    
+        /* النصوص */
+        --color-heading: #ffffff;
+        /* عناوين */
+        --color-text: #e4e4e7;
+        /* فقرات */
+        --color-muted: #a1a1aa;
+        /* نص ثانوي */
+    
+        /* الروابط */
+        --color-link: #ffffff;
+        --color-link-hover: #c1121f;
+        /* لون تمييز */
+    
+        /* الحدود */
+        --color-border: #2a2a2f;
+ }
 /* over hidding */
-.title{
-    background-color: var(--color-black);
+.nav-top{
+    background-color: var(--color-elevated);
 }
 .info{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding:.5rem .9375rem;
-    color: var(--color-white);
+    color: var(--color-heading);
 }
 .license {
     width: 24px;
     height: 15px;
-    fill: var(--color-white);
+    fill: var(--color-muted);
 }
 .viewBox{
     display: flex;
     align-items: center;
     gap: .625rem;
 }
-.title span{
+.nav-top span{
     display: flex;
     align-items: center;
     font-size: .875rem;
@@ -47,7 +90,7 @@
     margin: auto;
 }
 header{
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--color-border);
    
 }
 .nav{
@@ -78,7 +121,7 @@ header{
     width: 45px;
     height: 45px;
     background-color: #000;
-    color: #fff;
+    color: var(--color-heading);
     border-radius: 50%;
     font-size: 1.5rem;
 }
@@ -95,16 +138,16 @@ header{
     display: block;
     text-decoration: none;
     font-size: 1.25rem;
-    color: var(--color-gray-600);
+    color: var(--color-primary);
     font-family: "Cairo", sans-serif;
     cursor: pointer;
     transition: .4s ease;
 }
 .menu  .active{
-    color: var(--color-black);
+    color: var(--color-primary);
 }
 .menu a:hover{
-    color: var(--color-black);
+    color: var(--color-muted);
 }
 .menu-toggle{
     display: none;
@@ -120,7 +163,7 @@ header{
 .link span{
     width: 100%;
     height: 10px;
-    background-color: #000;
+    background-color:var(--black-heading);
 }
 .down{
     width: 40px;
@@ -147,20 +190,20 @@ header{
     font-size: 1.125rem;
     font-family: "Cairo", sans-serif;
     border-radius: 8px;
-    color: var(--color-white);
-    background:var(--destructive) ;
+    color: var(--color-heading);
+    background:var(--color-accent) ;
 }
 h1{
     font-size: clamp(24px ,5vw,50px);
     font-weight: 800;
     font-family: "Cairo", sans-serif;;
-    color: var(--color-white);
+    color: var(--color-heading);
     margin: .625rem 0 .3125rem;
 }
 .hero .des{
     font-size: clamp(15px ,3vw,19px);
-    color: var(--color-white);
-    width: 600px;
+    color: var(--color-heading);
+    max-width: 600px;
     line-height: 1.6;
     font-family: "Almarai";
     word-spacing: 1px;
@@ -182,14 +225,15 @@ h1{
     font-size: 1.23rem;
     font-family: "Cairo", sans-serif;
     transition: transform .4s;
+    color: var(--color-surface);
 }
 .hero-btn button:hover{
     transform: translateY(-2px);
 }
 .hero-btn  button:nth-child(2){
-    background-color: var(--color-gray-600);
+    background-color: var(--color-muted);
     border: 2px solid #fff;
-    color: var(--color-white);
+    color: var(--color-text);
 }
 /*  */
 .return{
@@ -204,7 +248,7 @@ h1{
     gap: 1.25rem;
 }
 .ter-ico{
-    background:var(--back);
+    background:var(--color-text);
     width:45px;
     height: 45px;
     border-radius: 50%;
@@ -215,7 +259,7 @@ h1{
 .return .license{
     width: 20px;
     height: 20px;
-    fill: #000; 
+    fill:var(--black-heading); 
 }
 .return p{
     font-family: "Almarai" sans-serif;
@@ -235,7 +279,7 @@ h2{
     font-size: 1.3rem;
     font-family: "Almarai" sans-serif;
     text-align: center;
-    color: #857373;
+    color: var(--color-muted);
 }
 .box-prod {
     margin-top: 2.5rem;
@@ -244,7 +288,6 @@ h2{
     gap: 1.23rem;
 }
 .cards{
-    background: #030213;
     width: 100%;
     height: 250px;
     position: relative;
@@ -262,7 +305,7 @@ h2{
     transform: scale(1.1);
 }
 .over-card{
-    background: #030213a8;
+   background: #0a0a0a33;
    width: 100%;
    height: 100%;
    position: absolute;
@@ -276,15 +319,15 @@ h2{
 h3{
     font-size: 1.8rem;
     font-family: "Cairo", sans-serif;
-    color:var(--color-white);
+    color:var(--color-heading);
     margin-bottom: 5px;
 }
 .back p{
-    background-color: #d4183e59;
+    background-color:var(--black-heading);
     font-size: 1.3rem;
     padding: .5rem;
     border-radius: 8px;
-    color: #e8e8e8ef;
+    color: var(--color-muted);
 }
 /*  */
 .box-about{
@@ -313,7 +356,7 @@ h3{
     padding: .625rem;
     position: absolute;
     bottom: 40%;
-    color: #fff;
+    color:var(--color-heading);
 }
 .text-about h4{
     font-size: 2.5rem;
@@ -324,6 +367,7 @@ h3{
     font-size: 1.2rem;
     font-family: "Almarai" ,sans-serif;
     line-height: 1.7;
+    color: var(--color-text);
 }
 .about-info{
     display: grid;
@@ -351,12 +395,12 @@ h3{
     font-size: 1.1rem;
     font-family:"cairo", sans-serif ;
     border: none;
-    background: #000;
-    color: var(--color-white);
+    background: var(--black-heading);
+    color: var(--color-heading);
     border-radius: 8px;
 }
 .text-info .license{
-    fill: var(--color-white);
+    fill: var(--color-heading);
 }
 .img-info{
     width: 100%;
@@ -370,11 +414,44 @@ h3{
     height: 100%;
     object-fit: cover;
 }
+/*  */
+.Cust-opinion{
+    background: var(--black-heading);
+    padding: 4rem 0;
+    margin-top: 1.25rem;
+}
+.opinion{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: .625rem;
+}
+.opinion .card{
+    text-align: center;
+    padding: .625rem 0;
+}
+.opinion p:nth-of-type(1){
+    font-size: 2rem;
+    margin: .5rem;
+    color: var(--color-heading);
+}
+.opinion .card .lucide{
+    width: 40px;
+    height: 40px;
+    fill: var(--color-muted);
+    background: var(--color-heading);
+    padding: .5rem;
+    border-radius: 50%;
+}
+.opinion p:nth-of-type(2){
+    color: var(--color-muted);
+    font-family: "Almarai", sans-serif;
+}
+
 /* =====================subscription========================================== */
 .subscription{
-    background: #000;
-    color: #fff;
-    padding: 4rem;
+    background:var(--black-heading);
+    color: var(--color-heading);
+    padding: 4rem ;
     margin: 4rem 0 1.25rem;
     text-align: center;
 }
@@ -387,6 +464,7 @@ h3{
     font-family:"Almarai",sans-serif ;
     margin: .625rem 0 1.25rem;
     line-height: 1.9;
+    color: var(--color-text);
 }
 .subsc input{
     padding: 10px 15px;
@@ -404,19 +482,19 @@ h3{
     font-size: 1rem;
     font-weight: bold;
     font-family: "cairo", sans-serif;
-    background: var(--destructive);
+    background: var(--color-accent);
     border: none;
-    color: var(--color-white);
+    color: var(--color-heading);
     margin-right: 5px;
     transition: .4s;
 }
 .subsc button:hover{
-    transform: translateY(5px);
+    transform: translateY(-5px);
 }
 /* ====================footer========================================== */
 footer{
-    background: #000;
-    color: #fff;
+    background: var(--black-heading);
+    color: var(--color-heading);
 }
 .box-footer{
     padding: .9375rem;
@@ -428,13 +506,13 @@ footer{
 }
 h5{
     font-size: 1.3rem;
-    font-family: "cairo";
+    font-family: "cairo",sans-serif;
     margin-bottom: 1.2rem;
 }
 .text-footer p{
     font-family: "Almarai",sans-serif;
     line-height: 1.6;
-    color: oklch(100% 0.00011 271.152 / 0.616);
+    color: var(--color-muted);
 }
 .text-footer ul li {
     list-style: none;
@@ -442,22 +520,22 @@ h5{
 }
 .text-footer a{
     text-decoration: none;
-    color: oklch(100% 0.00011 271.152 / 0.616);
+    color:var(--color-muted);
     font-size: 1.1875rem;
     font-family:"Almarai", sans-serif ;
     transition:  color .4s;
 }
 .text-footer a:hover{
-    color: oklch(100% 0.00011 271.152);
+    color: var(--color-text);
 }
 .foot-icon ul li{
     display: flex;
     align-items: center;
     gap: .5rem;
-    color: oklch(100% 0.00011 271.152 / 0.616);
+    color: var(--color-text);
 }
 .end{
-    border-top:2px solid #857373 ;
+    border-top:2px solid var(--color-border);
     margin-top: .625rem;
     text-align: center;
 }
@@ -558,6 +636,9 @@ h5{
     /*  */
     .box-prod{
         grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .opinion{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     /* ===============================subscription================================== */
     .subscription{
